@@ -1,10 +1,10 @@
 //import export y funciones comunes de arreglos
-import {heroes} from './data/heroes'
+import {heroes} from '../data/heroes'
 
 console.log(heroes) //se imprime en consola los  heroes.js 
 
 
-const getHeroeById = (Id) => {
+export const getHeroeById = (Id) => {
     return heroes.find( heroe => heroe.id === Id);
     //find recibe una funcion de argumeno que se ejecuta como un callback
     //es decir que funciona por iteraciones al igual que un for, donde estamos buscando el valor
@@ -14,7 +14,7 @@ const getHeroeById = (Id) => {
 console.log( getHeroeById(2) );
 
 
-const getHeroebyOwner = (Owner) => {
+ export  const getHeroebyOwner = (Owner) => {
     return heroes.filter( heroe => heroe.owner === Owner);
 
     //Filter es similar al find, solo que devuelve todos los valores que contienen la regla
